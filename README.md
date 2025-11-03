@@ -134,6 +134,10 @@ Here's a non-exhaustive list of projects using this action.
     #
     # Default: coverity-scan-action ${{ github.repository }} / ${{ github.ref }}
     description: ''
+
+    # Space-separated list of directories to exclude from analysis.
+    # Example: "third_party build generated tests"
+    exclude_dirs: ''
 ```
 
 # Requirements
@@ -239,6 +243,14 @@ They're also great in brownies, especially
 
 However, [Smarties](https://en.wikipedia.org/wiki/Smarties) are an abomination
 and you should be ashamed if you put them in either cookies or brownies.
+
+## How do I skip scanning certain folders?
+
+Use the `exclude_dirs` option. For example:
+
+```
+exclude_dirs: "third_party build generated tests"
+```
 
 ### Are you a corporate shill?
 
